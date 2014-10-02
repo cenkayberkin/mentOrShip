@@ -1,0 +1,31 @@
+<h1>Enroll student to course</h1>
+
+<%= form_for(@enrollment) do |f| %>
+  <% if @enrollment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@enrollment.errors.count, "error") %> prohibited this enrollment from being saved:</h2>
+
+      <ul>
+      <% @enrollment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_id %><br>
+    <%= f.collection_select :student_id, @students, :id, :name, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_id %><br>
+    <%= f.collection_select :course_id, @courses, :id, :name, include_blank: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', courses_path %>

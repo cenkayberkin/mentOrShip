@@ -27,4 +27,3 @@ Enrollment.create({course: course1,student: student4, enrollment_date: DateTime.
 Enrollment.create({course: course2,student: student4, enrollment_date: DateTime.now - 5.hours})
 Enrollment.create({course: course3,student: student4, enrollment_date: DateTime.now - 1.week})
 Enrollment.create({course: course4,student: student4, enrollment_date: DateTime.now - 3.weeks})
-Enrollment.create({course: course4,student: student4, enrollment_date: DateTime.now - 3.weeks})

@@ -9,8 +9,7 @@ class CoursesController < ApplicationController
   # GET /courses/1.json
   def show
     @course = Course.find(params[:id])
-    @students = @course.students
-    @enrollments = @course.enrollments
+    # binding.pry
   end
 
   # GET /courses/new
